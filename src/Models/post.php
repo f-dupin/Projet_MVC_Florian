@@ -15,6 +15,7 @@ class post
     private $category_id;
     private $view;
     private $share;
+    private $number_comments;
 
     private $name;
     private $image;
@@ -52,6 +53,9 @@ class post
     }
     public function getShare() {
         return $this->share;
+    }
+    public function getComments() {
+        return $this->number_comments;
     }
 
     public function getNames() {
@@ -100,6 +104,9 @@ class post
     }
     public function setShare($share) {
         $this->share = $share;
+    }
+    public function setComments($comments) {
+        $this->number_comments = $comments;
     }
 
     public function setNames($names) {

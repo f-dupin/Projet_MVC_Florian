@@ -15,7 +15,7 @@ class postManager
 
     public function getMostView()
     {
-        $stmt = $this->bdd->prepare('SELECT firstname, lastname, posts.id AS ID, header, content, timestamp , user_id, posts.file_id, view, share , name, image, thumb, size FROM posts INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id ORDER BY view DESC LIMIT 2');
+        $stmt = $this->bdd->prepare('SELECT number_comments, firstname, lastname, posts.id AS ID, header, content, timestamp , user_id, posts.file_id, view, share , name, image, thumb, size FROM posts INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id ORDER BY view DESC LIMIT 2');
         $stmt->execute();
 
         $lesPosts = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
@@ -29,7 +29,7 @@ class postManager
 
     public function getHotNews()
     {
-        $stmt = $this->bdd->prepare('SELECT firstname, lastname, posts.id AS ID, header, content, timestamp , user_id, posts.file_id, view, share , name, image, thumb, size FROM posts INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id ORDER BY view DESC LIMIT 1');
+        $stmt = $this->bdd->prepare('SELECT number_comments,firstname, lastname, posts.id AS ID, header, content, timestamp , user_id, posts.file_id, view, share , name, image, thumb, size FROM posts INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id ORDER BY view DESC LIMIT 1');
         $stmt->execute();
 
         $lesPosts = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
