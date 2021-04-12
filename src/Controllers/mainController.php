@@ -21,6 +21,7 @@ class mainController
     public function index() {
         $MostViews = $this->post->getMostView();
         $HotNew = $this->post->getHotNews();
+        $mobilePost = $this->post->getAllMobilePost();
         require VIEWS . 'Page/index.php';
     }
 }

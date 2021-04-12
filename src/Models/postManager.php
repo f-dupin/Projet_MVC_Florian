@@ -40,4 +40,12 @@ class postManager
         $lesCategory = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\category");
         return array($lesPosts, $lesCategory);
     }
+    public function getAllMobilePost()
+    {
+        $stmt = $this->bdd->prepare('SELECT posts.id, header, content, timestamp, posts.user_id, posts.file_id, view, share, number_comments, name, image, thumb, size, firstname,lastname FROM posts_category INNER JOIN posts ON posts_category.id_post = posts.id INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id WHERE id_category = 1');
+        $stmt->execute();
+
+        $mobilePost = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
+        return $mobilePost;
+    }
 }
