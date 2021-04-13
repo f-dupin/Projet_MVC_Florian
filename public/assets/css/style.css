@@ -270,24 +270,22 @@ h6 {
         width: 80%;
         margin-left: 10%;
     }
+    .littlemargintoplg {
+        margin-top: 25px !important;
+    }
+    .petitPost>h4 {
+        font-size: 20px !important;
+    }
 }
 
-#TitreMobile {
+.TitreCategory {
     display: inline-block;
     width: 20%;
     vertical-align: middle;
+    font-weight: 650;
 }
-#Mobile_TraitGris {
-    display: inline-block;
-    width: 80%;
-    height: 2px;
-    background-color: #A5A5A5;
-}
-#Mobile_TraitViolet {
-    width: 200px;
-    height: 2px;
-    background-color: #5F35AC;
-}
+
+
 .bigImage {
     width: 100%;
     height: 350px;
@@ -295,9 +293,59 @@ h6 {
 }
 .smallImage {
     width: 100%;
-    height: 125px;
+    height: 100%;
     object-fit: cover;
 }
+.miniImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.creditPost {
+    font-weight: 700;
+}
+.petitPost>h4 {
+    font-size: 13px;
+    font-weight: 700;
+}
+.subtitleLittlePost {
+    font-size: 12px;
+}
+.littlecontainer_social_coms {
+    padding: 0 !important;
+}
+.littlecontainer_social_coms>p {
+    display: inline-block;
+    color: #A5A5A5;
+}
+.littlecontainer_social_coms>p>span {
+    color: #3A3A3A;
+    font-weight: bold;
+}
+.littleshare_coms {
+    font-size: 12px;
+}
+.littleshare_coms>i {
+    padding: 6px 7px 6px 6px;
+    background-color: #A5A5A5;
+    color: white;
+}
+.littleshare_coms2 {
+    font-size: 12px;
+}
+.littleshare_coms2>i {
+    padding: 5px 5px 5px 5px;
+    background-color: #A5A5A5;
+    color: white;
+}
+.margintop {
+    margin-top: 50px !important;
+}
+.littlemargintop {
+    margin-top: 25px !important;
+}
+/* CSS CATEGORY MOBILE */
 .mobileEtiquette {
     background-color: #5F35AC;
     color: white;
@@ -317,29 +365,161 @@ h6 {
     font-size: 12px;
     padding: 3px 3px 3px 3px;
 }
-.creditPost {
-    font-weight: 700;
-}
-.petitPost>h4 {
-    font-size: 13px;
-}
-.subtitleLittlePost {
-    font-size: 12px;
-}
-.littlecontainer_social_coms {
-    padding: 0 !important;
-}
-.littlecontainer_social_coms>p {
+#Mobile_TraitGris {
     display: inline-block;
-    color: #A5A5A5;
+    width: 80%;
+    height: 2px;
+    background-color: #A5A5A5;
 }
-.littlecontainer_social_coms>p>span {
-    color: #3A3A3A;
-    font-weight: bold;
+#Mobile_TraitViolet {
+    width: 30%;
+    height: 2px;
+    background-color: #5F35AC;
 }
-.littleshare_coms {
+
+/* CSS CATEGORY TABLET */
+.tabletEtiquette {
+    background-color: #F72300;
+    color: white;
+    width: 80px;
+    text-align: center;
+}
+.tabletEtiquette>p {
+    padding: 3px 3px 3px 3px;
+}
+.tabletEtiquetteSmall {
+    background-color: #F72300;
+    color: white;
+    width: 60px;
+    text-align: center;
+}
+.tabletEtiquetteSmall>p {
     font-size: 12px;
+    padding: 3px 3px 3px 3px;
 }
-.littleshare_coms2 {
+#Tablet_TraitGris {
+    display: inline-block;
+    width: 80%;
+    height: 2px;
+    background-color: #A5A5A5;
+}
+#Tablet_TraitRed {
+    width: 30%;
+    height: 2px;
+    background-color: #F72300;
+}
+
+/* CSS CATEGORY TABLET */
+.GadgetsEtiquette {
+    background-color: #000000;
+    color: white;
+    width: 80px;
+    text-align: center;
+}
+.GadgetsEtiquette>p {
+    padding: 3px 3px 3px 3px;
+}
+.GadgetsEtiquetteSmall {
+    background-color: #000000;
+    color: white;
+    width: 60px;
+    text-align: center;
+}
+.GadgetsEtiquetteSmall>p {
     font-size: 12px;
+    padding: 3px 3px 3px 3px;
+}
+#Gadgets_TraitGris {
+    display: inline-block;
+    width: 80%;
+    height: 2px;
+    background-color: #A5A5A5;
+}
+#Gadgets_TraitBlack {
+    width: 30%;
+    height: 2px;
+    background-color: #000000;
+}
+
+/* CSS CATEGORY CAMERA */
+.CameraEtiquette {
+    background-color: #FF8400;
+    color: white;
+    width: 80px;
+    text-align: center;
+}
+.CameraEtiquette>p {
+    padding: 3px 3px 3px 3px;
+}
+.CameraEtiquetteSmall {
+    background-color: #FF8400;
+    color: white;
+    width: 60px;
+    text-align: center;
+}
+.CameraEtiquetteSmall>p {
+    font-size: 12px;
+    padding: 3px 3px 3px 3px;
+}
+#Camera_TraitGris {
+    display: inline-block;
+    width: 80%;
+    height: 2px;
+    background-color: #A5A5A5;
+}
+#Camera_TraitOrange {
+    width: 30%;
+    height: 2px;
+    background-color: #FF8400;
+}
+
+    /* CSS CATEGORY DESIGN */
+.DesignEtiquette {
+    background-color: #2196F3;
+    color: white;
+    width: 80px;
+    text-align: center;
+}
+.DesignEtiquette>p {
+    padding: 3px 3px 3px 3px;
+}
+.DesignEtiquetteSmall {
+    background-color: #2196F3;
+    color: white;
+    width: 60px;
+    text-align: center;
+}
+.DesignEtiquetteSmall>p {
+    font-size: 12px;
+    padding: 3px 3px 3px 3px;
+}
+#Design_TraitGris {
+    display: inline-block;
+    width: 80%;
+    height: 2px;
+    background-color: #A5A5A5;
+}
+#Design_TraitBlue {
+    width: 30%;
+    height: 2px;
+    background-color: #2196F3;
+}
+
+.TitreCategoryAside {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: 30px;
+}
+#Aside_TraitGris {
+    display: inline-block;
+    width: 50%;
+    height: 2px;
+    background-color: #A5A5A5;
+}
+#Aside_TraitBlack {
+    width: 30%;
+    height: 2px;
+    background-color: #000000;
 }
