@@ -12,7 +12,13 @@ class postManager
         $this->bdd = new \PDO('mysql:host='.HOST.';dbname=' . DATABASE . ';charset=utf8;' , USER, PASSWORD);
         $this->bdd->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
+    public function getAllCategory() {
+        $stmt = $this->bdd->prepare('SELECT * FROM category');
+        $stmt->execute();
 
+        $categories = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\category");
+        return array($categories);
+    }
     public function getMostView()
     {
         $stmt = $this->bdd->prepare('SELECT number_comments, firstname, lastname, posts.id AS ID, header, content, timestamp , user_id, posts.file_id, view, share , name, image, thumb, size FROM posts INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id ORDER BY view DESC LIMIT 2');
@@ -40,40 +46,26 @@ class postManager
         $lesCategory = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\category");
         return array($lesPosts, $lesCategory);
     }
-    public function getAllMobilePost()
-    {
-        $stmt = $this->bdd->prepare('SELECT posts.id, header, content, timestamp, posts.user_id, posts.file_id, view, share, number_comments, name, image, thumb, size, firstname,lastname FROM posts_category INNER JOIN posts ON posts_category.id_post = posts.id INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id WHERE id_category = 1 ORDER BY timestamp DESC');
+    public function getAllPostByType($type) {
+        $stmt = $this->bdd->prepare('SELECT posts.id, header, content, timestamp, posts.user_id, posts.file_id, view, share, number_comments, name, image, thumb, size, firstname,lastname FROM posts_category INNER JOIN posts ON posts_category.id_post = posts.id INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id WHERE id_category = '.$type.' ORDER BY timestamp DESC LIMIT 5');
         $stmt->execute();
 
-        $mobilePost = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
-        return $mobilePost;
+        $Post = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
+        return $Post;
     }
-    public function getAllTabletPost() {
-        $stmt = $this->bdd->prepare('SELECT posts.id, header, content, timestamp, posts.user_id, posts.file_id, view, share, number_comments, name, image, thumb, size, firstname,lastname FROM posts_category INNER JOIN posts ON posts_category.id_post = posts.id INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id WHERE id_category = 2 ORDER BY timestamp DESC');
-        $stmt->execute();
-
-        $tabletPost = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
-        return $tabletPost;
-    }
-    public function getAllGadgetsPost() {
-        $stmt = $this->bdd->prepare('SELECT posts.id, header, content, timestamp, posts.user_id, posts.file_id, view, share, number_comments, name, image, thumb, size, firstname,lastname FROM posts_category INNER JOIN posts ON posts_category.id_post = posts.id INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id WHERE id_category = 5 ORDER BY timestamp DESC');
-        $stmt->execute();
-
-        $gadgetsPost = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
-        return $gadgetsPost;
-    }
-    public function getAllCameraPost() {
-        $stmt = $this->bdd->prepare('SELECT posts.id, header, content, timestamp, posts.user_id, posts.file_id, view, share, number_comments, name, image, thumb, size, firstname,lastname FROM posts_category INNER JOIN posts ON posts_category.id_post = posts.id INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id WHERE id_category = 4 ORDER BY timestamp DESC');
-        $stmt->execute();
-
-        $cameraPost = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
-        return $cameraPost;
-    }
-    public function getAllDesignPost() {
-        $stmt = $this->bdd->prepare('SELECT posts.id, header, content, timestamp, posts.user_id, posts.file_id, view, share, number_comments, name, image, thumb, size, firstname,lastname FROM posts_category INNER JOIN posts ON posts_category.id_post = posts.id INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id WHERE id_category = 3 ORDER BY timestamp DESC');
+    public function getAllMostPopularPost() {
+        $stmt = $this->bdd->prepare('SELECT posts.id, header, content, timestamp, posts.user_id, posts.file_id, view, share, number_comments, name, image, thumb, size, firstname,lastname FROM posts_category INNER JOIN posts ON posts_category.id_post = posts.id INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id ORDER BY share DESC LIMIT 4');
         $stmt->execute();
 
         $designPost = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
         return $designPost;
     }
+    public function getAllMostCommentedPost() {
+        $stmt = $this->bdd->prepare('SELECT posts.id, header, content, timestamp, posts.user_id, posts.file_id, view, share, number_comments, name, image, thumb, size, firstname,lastname FROM posts_category INNER JOIN posts ON posts_category.id_post = posts.id INNER JOIN file ON posts.file_id = file.id INNER JOIN user ON user.id = posts.user_id ORDER BY number_comments DESC LIMIT 4');
+        $stmt->execute();
+
+        $designPost = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
+        return $designPost;
+    }
+
 }

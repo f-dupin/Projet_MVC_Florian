@@ -306,7 +306,7 @@ h6 {
     font-weight: 700;
 }
 .petitPost>h4 {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
 }
 .subtitleLittlePost {
@@ -346,22 +346,22 @@ h6 {
     margin-top: 25px !important;
 }
 /* CSS CATEGORY MOBILE */
-.mobileEtiquette {
+.MobileEtiquette {
     background-color: #5F35AC;
     color: white;
     width: 80px;
     text-align: center;
 }
-.mobileEtiquette>p {
+.MobileEtiquette>p {
     padding: 3px 3px 3px 3px;
 }
-.mobileEtiquetteSmall {
+.MobileEtiquetteSmall {
     background-color: #5F35AC;
     color: white;
     width: 60px;
     text-align: center;
 }
-.mobileEtiquetteSmall>p {
+.MobileEtiquetteSmall>p {
     font-size: 12px;
     padding: 3px 3px 3px 3px;
 }
@@ -378,22 +378,22 @@ h6 {
 }
 
 /* CSS CATEGORY TABLET */
-.tabletEtiquette {
+.TabletEtiquette {
     background-color: #F72300;
     color: white;
     width: 80px;
     text-align: center;
 }
-.tabletEtiquette>p {
+.TabletEtiquette>p {
     padding: 3px 3px 3px 3px;
 }
-.tabletEtiquetteSmall {
+.TabletEtiquetteSmall {
     background-color: #F72300;
     color: white;
     width: 60px;
     text-align: center;
 }
-.tabletEtiquetteSmall>p {
+.TabletEtiquetteSmall>p {
     font-size: 12px;
     padding: 3px 3px 3px 3px;
 }
@@ -507,14 +507,14 @@ h6 {
 
 .TitreCategoryAside {
     display: inline-block;
-    width: 50%;
+    width: 60%;
     vertical-align: middle;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
 }
 #Aside_TraitGris {
     display: inline-block;
-    width: 50%;
+    width: 40%;
     height: 2px;
     background-color: #A5A5A5;
 }
@@ -522,4 +522,16 @@ h6 {
     width: 30%;
     height: 2px;
     background-color: #000000;
+}
+.TraitGrisMore {
+    width: 100%;
+    height: 2px;
+    background-color: #A5A5A5;
+    vertical-align: middle;
+    margin-bottom: 10px !important;
+}
+.ReadMore {
+    vertical-align: middle;
+    margin-top: -10px;
+    font-weight: 600;
 }

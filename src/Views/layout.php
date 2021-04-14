@@ -126,9 +126,140 @@
         </div>
 
     </header>
+    <?php
+        if (isset($header)) {
+            echo $header;
+        }
+    ?>
 
     <main>
-        <?php echo $content; ?>
+        <section>
+            <div class="container margintop">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <?php echo $content; ?>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2 class="TitreCategoryAside margintop">Popular News</h2><div id="Aside_TraitGris"><div id="Aside_TraitBlack"></div></div>
+                        <div class="container-fluid nopadding littlemargintop">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img class="miniImage" src="<?= $mostPopularPost[0]->getImage(); ?>">
+                                </div>
+                                <div class="col-7 petitPost">
+                                    <h4><?= $mostPopularPost[0]->getHeader(); ?></h4>
+                                    <p class="subtitleLittlePost"><span class="creditPost"><?php setlocale(LC_ALL, 'fr_FR.UTF8', 'fr_FR','fr','fr','fra','fr_FR@euro'); echo date('jD- Y', strtotime($mostPopularPost[0]->getTimeStamp())); ?></span>, by: <span class="creditPost"><?= $mostPopularPost[0]->getFirstName(); ?> <?= $mostPopularPost[0]->getLastName(); ?></span></p>
+                                    <div class="littlecontainer_social_coms">
+                                        <p class="littleshare_coms"><i class="fas fa-share-alt"></i> <span><?= $mostPopularPost[0]->getShare(); ?></span> Partage</p>
+                                        <p class="littleshare_coms2"><i class="far fa-comments"></i> <span><?= $mostPopularPost[0]->getComments(); ?></span> Commentaire</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid nopadding littlemargintop">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img class="miniImage" src="<?= $mostPopularPost[1]->getImage(); ?>">
+                                </div>
+                                <div class="col-7 petitPost">
+                                    <h4><?= $mostPopularPost[1]->getHeader(); ?></h4>
+                                    <p class="subtitleLittlePost"><span class="creditPost"><?php setlocale(LC_ALL, 'fr_FR.UTF8', 'fr_FR','fr','fr','fra','fr_FR@euro'); echo date('jD- Y', strtotime($mostPopularPost[1]->getTimeStamp())); ?></span>, by: <span class="creditPost"><?= $mostPopularPost[1]->getFirstName(); ?> <?= $mostPopularPost[1]->getLastName(); ?></span></p>
+                                    <div class="littlecontainer_social_coms">
+                                        <p class="littleshare_coms"><i class="fas fa-share-alt"></i> <span><?= $mostPopularPost[1]->getShare(); ?></span> Partage</p>
+                                        <p class="littleshare_coms2"><i class="far fa-comments"></i> <span><?= $mostPopularPost[1]->getComments(); ?></span> Commentaire</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid nopadding littlemargintop">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img class="miniImage" src="<?= $mostPopularPost[2]->getImage(); ?>">
+                                </div>
+                                <div class="col-7 petitPost">
+                                    <h4><?= $mostPopularPost[2]->getHeader(); ?></h4>
+                                    <p class="subtitleLittlePost"><span class="creditPost"><?php setlocale(LC_ALL, 'fr_FR.UTF8', 'fr_FR','fr','fr','fra','fr_FR@euro'); echo date('jD- Y', strtotime($mostPopularPost[2]->getTimeStamp())); ?></span>, by: <span class="creditPost"><?= $mostPopularPost[2]->getFirstName(); ?> <?= $mostPopularPost[2]->getLastName(); ?></span></p>
+                                    <div class="littlecontainer_social_coms">
+                                        <p class="littleshare_coms"><i class="fas fa-share-alt"></i> <span><?= $mostPopularPost[2]->getShare(); ?></span> Partage</p>
+                                        <p class="littleshare_coms2"><i class="far fa-comments"></i> <span><?= $mostPopularPost[2]->getComments(); ?></span> Commentaire</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid nopadding littlemargintop">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img class="miniImage" src="<?= $mostPopularPost[3]->getImage(); ?>">
+                                </div>
+                                <div class="col-7 petitPost">
+                                    <h4><?= $mostPopularPost[3]->getHeader(); ?></h4>
+                                    <p class="subtitleLittlePost"><span class="creditPost"><?php setlocale(LC_ALL, 'fr_FR.UTF8', 'fr_FR','fr','fr','fra','fr_FR@euro'); echo date('jD- Y', strtotime($mostPopularPost[3]->getTimeStamp())); ?></span>, by: <span class="creditPost"><?= $mostPopularPost[3]->getFirstName(); ?> <?= $mostPopularPost[3]->getLastName(); ?></span></p>
+                                    <div class="littlecontainer_social_coms">
+                                        <p class="littleshare_coms"><i class="fas fa-share-alt"></i> <span><?= $mostPopularPost[3]->getShare(); ?></span> Partage</p>
+                                        <p class="littleshare_coms2"><i class="far fa-comments"></i> <span><?= $mostPopularPost[3]->getComments(); ?></span> Commentaire</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <h2 class="TitreCategoryAside margintop">Most Commented</h2><div id="Aside_TraitGris"><div id="Aside_TraitBlack"></div></div>
+                            <div class="container-fluid nopadding littlemargintop">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <img class="miniImage" src="<?= $mostPopularPost[0]->getImage(); ?>">
+                                    </div>
+                                    <div class="col-7 petitPost">
+                                        <h4><?= $mostPopularPost[0]->getHeader(); ?></h4>
+                                        <div class="littlecontainer_social_coms">
+                                            <p class="littleshare_coms2"><i class="far fa-comments"></i> <span><?= $mostPopularPost[0]->getComments(); ?></span> Commentaire</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid nopadding littlemargintop">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <img class="miniImage" src="<?= $mostPopularPost[1]->getImage(); ?>">
+                                    </div>
+                                    <div class="col-7 petitPost">
+                                        <h4><?= $mostPopularPost[1]->getHeader(); ?></h4>
+                                        <div class="littlecontainer_social_coms">
+                                            <p class="littleshare_coms2"><i class="far fa-comments"></i> <span><?= $mostPopularPost[1]->getComments(); ?></span> Commentaire</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid nopadding littlemargintop">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <img class="miniImage" src="<?= $mostPopularPost[2]->getImage(); ?>">
+                                    </div>
+                                    <div class="col-7 petitPost">
+                                        <h4><?= $mostPopularPost[2]->getHeader(); ?></h4>
+                                        <div class="littlecontainer_social_coms">
+                                            <p class="littleshare_coms2"><i class="far fa-comments"></i> <span><?= $mostPopularPost[2]->getComments(); ?></span> Commentaire</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid nopadding littlemargintop">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <img class="miniImage" src="<?= $mostPopularPost[3]->getImage(); ?>">
+                                    </div>
+                                    <div class="col-7 petitPost">
+                                        <h4><?= $mostPopularPost[3]->getHeader(); ?></h4>
+                                        <div class="littlecontainer_social_coms">
+                                            <p class="littleshare_coms2"><i class="far fa-comments"></i> <span><?= $mostPopularPost[3]->getComments(); ?></span> Commentaire</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 <script>

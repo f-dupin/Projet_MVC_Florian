@@ -19,13 +19,19 @@ class mainController
     }
 
     public function index() {
+        $categories = $this->post->getAllCategory();
+        $lesPosts = array();
+        foreach ($categories AS $category) {
+            foreach ($category AS $lacategory) {
+                $tableau = $this->post->getAllPostByType($lacategory->getIdCategory());
+                array_push($lesPosts, $tableau );
+            }
+        }
         $MostViews = $this->post->getMostView();
         $HotNew = $this->post->getHotNews();
-        $mobilePost = $this->post->getAllMobilePost();
-        $tabletPost = $this->post->getAllTabletPost();
-        $gadgetsPost = $this->post->getAllGadgetsPost();
-        $cameraPost = $this->post->getAllCameraPost();
-        $designPost = $this->post->getAllDesignPost();
+
+        $mostPopularPost = $this->post->getAllMostPopularPost();
+        $MostCommentedPost = $this->post->getAllMostCommentedPost();
         require VIEWS . 'Page/index.php';
     }
 }
