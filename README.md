@@ -19,6 +19,7 @@ Projet EDENSchool
   Faire le login/register et gerer les permissions des utilisateur
   Faire la modification/suppression/ajout des post
   Faire des test unitaires
+  Traduire le site en FR
   
 # Ce que j'ai fait :
 
