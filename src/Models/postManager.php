@@ -67,5 +67,11 @@ class postManager
         $designPost = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\post");
         return $designPost;
     }
+    public function getImageFooter() {
+        $stmt = $this->bdd->prepare('SELECT * FROM file LIMIT 12');
+        $stmt->execute();
 
+        $imageFooter = $stmt->fetchAll(\PDO::FETCH_CLASS,"main\models\images");
+        return $imageFooter;
+    }
 }

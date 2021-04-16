@@ -226,9 +226,9 @@ ob_start();
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="laNewsletter">
         <div class="row">
-            <div class="12">
+            <div class="col-12">
                 <div class="container">
                     <div class="row margintop">
                         <div class="col-lg-6">

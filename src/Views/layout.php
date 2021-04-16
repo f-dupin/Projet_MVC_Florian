@@ -259,6 +259,93 @@
             </div>
             <?php echo $content2; ?>
         </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="footer_separation"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h4 class="h4Footer">ABOUT TECH</h4><div class="footer_traitGris"><div class="footer_traitColor"></div></div>
+                        <img src="./assets/img/tech_about.jpg">
+                        <p>Competently conceptualize go forward testing procedures and B2B expertise. Photofluorescnetly cultivate principle-centered methods.of empowerment through fully researched</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h4 class="h4Footer">DISCOVER</h4><div class="footer_traitGris"><div class="footer_traitColor"></div></div>
+                        <div class="container-fluid nopadding">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <ul class="listFooter">
+                                        <li>Mobile</li>
+                                        <li>Tablet</li>
+                                        <li>Gadgets</li>
+                                        <li>Design</li>
+                                        <li>Camera</li>
+                                        <li>Apps</li>
+                                        <li>Login</li>
+                                        <li>About Us</li>
+                                        <li>Membership</li>
+                                        <li>Blog</li>
+                                        <li>Job</li>
+                                        <li>SiteMap</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-7">
+                                    <ul class="listFooter">
+                                        <li>Contact Us</li>
+                                        <li>Newsletter Alerts</li>
+                                        <li>Podcast</li>
+                                        <li>Sms Subscription</li>
+                                        <li>Advertisement Policy</li>
+                                        <li>Report Technical issue</li>
+                                        <li>Complaints and Corrections</li>
+                                        <li>Terms and Conditions</li>
+                                        <li>Privacy Policy</li>
+                                        <li>Cookie Policy</li>
+                                        <li>Securedrop</li>
+                                        <li>Archives</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-4">
+                        <h4 class="h4Footer">TECH PHOTOS</h4><div class="footer_traitGris"><div class="footer_traitColor"></div></div>
+                        <div class="container-fluid nopadding">
+                            <?php
+                                for ($i = 0; $i < count($imageFooter); $i++){
+                                    if ($i%3 == 0){
+                                        echo '<div class="row"><div class="col-4"><img class="ImageFooter" src="'.$imageFooter[$i]->getImage().'"></div>';
+                                    }else if ($i%3 == 2) {
+                                        echo '<div class="col-4"><img class="ImageFooter" src="'.$imageFooter[$i]->getImage().'"></div></div>';
+                                    }else {
+                                        echo '<div class="col-4"><img class="ImageFooter" src="'.$imageFooter[$i]->getImage().'"></div>';
+                                    }
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer_separation2"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p id="resaux_header"><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-tumblr"></i> <i class="fas fa-wifi"></i></p>
+                    </div>
+                    <div class="col-lg-5">
+                        <p class="textFooter">© COPYRIGHT 2022-OMEGA NEWS . DESIGN BY: OMEGA GRAPHICS</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <p class="textFooter">TECHNOLOGY NEWS MAGAZINE</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 </body>
 <script>
