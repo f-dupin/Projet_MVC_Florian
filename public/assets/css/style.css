@@ -586,3 +586,41 @@ iframe {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+#footer_separation {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#footer_separation2 {
+    width: 90%;
+    margin-left: 10%;
+    height: 2px;
+    background-color: black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#laNewsletter {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.ImageFooter {
+    margin-top: 5px;
+    width: 100%;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.listFooter {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 14px;
+}
+.h4Footer {
+    margin-bottom: 25px;
+}
+.textFooter {
+    text-align: center;
+    font-weight: 700;
+}

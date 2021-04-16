@@ -32,6 +32,8 @@ class mainController
 
         $mostPopularPost = $this->post->getAllMostPopularPost();
         $MostCommentedPost = $this->post->getAllMostCommentedPost();
+
+        $imageFooter = $this->post->getImageFooter();
         require VIEWS . 'Page/index.php';
     }
 }
