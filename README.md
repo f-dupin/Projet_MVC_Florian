@@ -21,6 +21,7 @@ Projet EDENSchool
   Faire la modification/suppression/ajout des post
   Faire des test unitaires
   Traduire le site en FR
+  La barre de recherche dans le header
   
 # Ce que j'ai fait :
 
