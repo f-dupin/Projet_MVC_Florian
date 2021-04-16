@@ -10,6 +10,7 @@ Projet EDENSchool
 # Changement effectuer:
 
   Changement de la date dans le header, je l'ai mise en francais car je trouvais ca plus pertinent etant donner que le site est entierement en francais.
+  J'ai changer dans le footer j'ai enlever le editor picks parce qu'il n'y avais pas d'autres categorie de post a mettre etant donner qu'il etait tous au dessus et donc j'ai enlever cette section car en plus ca faisait plus d'espace
   
 # Ce qu'il manque au projet et que j'aurais voulue faire :
   
