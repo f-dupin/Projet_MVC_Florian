@@ -8,9 +8,7 @@
     <script src="https://kit.fontawesome.com/c1d0ab37d6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/mobile-menu.css">
-    <link rel="stylesheet" href="/assets/css/offcanvas.min.css">
-    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+
 </head>
 <body>
     <header>
@@ -259,6 +257,7 @@
                     </div>
                 </div>
             </div>
+            <?php echo $content2; ?>
         </section>
     </main>
 </body>
@@ -281,28 +280,6 @@
     }
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <script src="/assets/js/jquery-2.1.4.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/jquery.easing.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/mobile-menu.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/offcanvas.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/owl.carousel.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/pagination.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/script.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/scripts.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/smoothscroll.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/validation.js" crossorigin="anonymous"></script>
-    <script src="/assets/lib/jquery/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/lib/jquery/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/lib/popper/popper.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/lib/tinymce/skins/lightgray/content.inline.min.css" crossorigin="anonymous"></script>
-    <script src="/assets/lib/tinymce/skins/lightgray/content.min.css" crossorigin="anonymous"></script>
-    <script src="/assets/lib/tinymce/skins/lightgray/content.mobile.min.css" crossorigin="anonymous"></script>
-    <script src="/assets/lib/tinymce/skins/lightgray/skin.min.css" crossorigin="anonymous"></script>
-    <script src="/assets/lib/tinymce/skins/lightgray/skin.mobile.min.css" crossorigin="anonymous"></script>
-    <script src="/assets/lib/tinymce/themes/inlite/theme.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/lib/tinymce/themes/mobile/theme.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/lib/tinymce/themes/modern/theme.min.js" crossorigin="anonymous"></script>
 </html>
 <?php
 unset($_SESSION['error']);

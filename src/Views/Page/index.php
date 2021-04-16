@@ -182,19 +182,72 @@ $cpt = 0;
                         </div>
                         <?php
                     }
-
                 }
-
-
-
-
-
 ?>
+
+
 
 <?php
         $cpt++;
     }
+?>
 
+
+
+<?php
 
 $content = ob_get_clean();
+ob_start();
+?>
+    <div id="videoContainer" class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <iframe height="100%" src="https://www.youtube.com/embed/MJ-jbFdUPns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-6">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <iframe height="auto" src="https://www.youtube.com/embed/LjouKxXuE4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-lg-6">
+                            <iframe height="auto" src="https://www.youtube.com/embed/UPvJXBI_3V4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div><div class="row">
+                        <div class="col-lg-6">
+                            <iframe height="auto" src="https://www.youtube.com/embed/Z6UzkcSDUys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-lg-6">
+                            <iframe height="auto" src="https://www.youtube.com/embed/grx-5UtRDDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="12">
+                <div class="container">
+                    <div class="row margintop">
+                        <div class="col-lg-6">
+                            <h2 id="newslatterH2"><span>SIGN UP</span> FOR THE LATEST NEWS</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <form>
+                                <label id="labelleNewslatter" for="newslatter">Email</label>
+                                <input id="newslatter" type="email">
+                                <button id="buttonNewslatter">SIGN UP</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
+
+$content2 = ob_get_clean();
 require VIEWS . 'layout.php';
